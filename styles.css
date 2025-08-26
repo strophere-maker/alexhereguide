@@ -51,5 +51,14 @@ h1{font-size:46px;line-height:1.1;margin:6px 0 10px;text-shadow:0 6px 24px rgba(
 .kpi{background:rgba(8,12,28,.8);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
 
 .footer{color:var(--muted);margin:28px 0 10px;font-size:13px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+/* === Background custom === */
+html, body { height: 100%; margin: 0; }
+body {
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(124,77,255,.20), transparent 60%),
+    radial-gradient(900px 600px at 120% 10%, rgba(34,211,238,.18), transparent 60%),
+    url("4C71B683-8ABF-49B9-933C-9681BF4F1690.jpeg") center/cover no-repeat fixed;
+  color: white;
+}
 a{color:#9ae6ff}
 @media(max-width:920px){.hero{grid-template-columns:1fr}}
