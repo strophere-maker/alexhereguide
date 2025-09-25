@@ -1,61 +1,29 @@
-<!DOCTYPE html>
-<html lang="ro">
+
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>aLexHERE • Divine Guide</title>
-  <meta name="description" content="AI Growth Playbook & Divine Vision by aLexHERE">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Infinite IQ — Master Course</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">aLexHERE <span class="spark">∞</span> Guide</div>
-    <nav class="nav">
-      <a href="./index.html">Acasă</a>
-      <a href="./AI_Growth_Playbook.pdf" download>Playbook (PDF)</a>
-      <a href="./checkout.html">Checkout</a>
-      <a href="./privacy.html">Privacy</a>
-      <a href="./refund.html">Refund</a>
-    </nav>
-  </header>
-
-  <!-- HERO cu fundalul din poză -->
-  <section class="hero">
-    <div class="veil"></div>
-    <div class="hero-inner">
-      <h1>Lumină care creează</h1>
-      <p>Zeus • Iisus Hristos • Enoch • Alexander — unite într-o singură viziune: aLexHERE.</p>
-      <div class="cta">
-        <a class="btn primary" href="./AI_Growth_Playbook.pdf" download>Download Playbook</a>
-        <a class="btn ghost" href="./checkout.html">Acces ghid complet</a>
-      </div>
-    </div>
-  </section>
-
   <main class="wrap">
-    <article class="panel">
-      <h2>Despre viziune</h2>
-      <p>
-        Site-ul reunește codurile tale: spiritual, creativ și operațional. Imaginea de început
-        este fundamentul — <em>lumina care ordonează haosul</em>. Totul este simplu, rapid,
-        și ușor de citit pe mobil.
-      </p>
-      <ul class="bullets">
-        <li>Design „glass” pe fundal cosmic cu imaginea ta eroică</li>
-        <li>Navigație clară către Checkout / Privacy / Refund</li>
-        <li>Buton de download pentru Playbook (PDF)</li>
-      </ul>
-    </article>
+    <h1>Infinite IQ — Master Course</h1>
+    <p>Unlock the complete playbook. Watermarked, secure access.</p>
+    <button id="buy">Buy now</button>
+    <p class="fineprint">
+      By purchasing you agree to our <a href="/privacy.html">Privacy</a> and <a href="/refund.html">Refund</a> policies.
+    </p>
   </main>
-
-  <footer class="footer">
-    © <span id="y"></span> aLexHERE • Creat cu 💜 pe GitHub Pages
-  </footer>
-
   <script>
-    // anul din footer
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('buy').addEventListener('click', async () => {
+      const res = await fetch('/create-checkout-session', { method: 'POST' });
+      const data = await res.json();
+      if (data.url) window.location = data.url;
+      else alert('Checkout error.');
+    });
   </script>
 </body>
 </html>

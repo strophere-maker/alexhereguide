@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="12" fill="#ffd166"/><text x="50%" y="54%" font-family="Arial, Helvetica" font-size="22" text-anchor="middle" fill="#222">aL</text>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='#222'/><text x='50%' y='54%' text-anchor='middle' font-size='28' fill='#fff' font-family='Arial' dy='.1em'>IQ</text></svg>

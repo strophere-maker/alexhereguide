@@ -1,0 +1,1 @@
+Place your master PDF here as 'Infinite_IQ_Master.pdf'. Do NOT commit the real file to GitHub.
