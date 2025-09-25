@@ -1,0 +1,19 @@
+# Node & tooling
+node_modules/
+npm-debug.log*
+yarn.lock
+.pnpm-store/
+dist/
+.build/
+.cache/
+.vercel/
+.render/
+.tmp/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Content master (do not commit your real course file)
+content/Infinite_IQ_Master.pdf
