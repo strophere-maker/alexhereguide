@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infinite IQ — Curs</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Infinite IQ — Curs</h1>
+    <p>După plată primești un link unic de descărcare care expiră.</p>
+    <a id="pay-revolut" class="btn" href="#" rel="nofollow">Plătește cu Revolut</a>
+  </main>
+
+  <script>
+    fetch('/revolut-link')
+      .then(r=>r.json())
+      .then(d=>{
+        const a = document.getElementById('pay-revolut');
+        if (d.url) a.href = d.url; else a.textContent = 'Link Revolut indisponibil';
+      });
+  </script>
+
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;text-align:center;padding:40px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:8px;background:#4a90e2;color:#fff;text-decoration:none}
+  </style>
+</body>
+</html>
